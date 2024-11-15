@@ -13,6 +13,5 @@ import vercelServerless from '@astrojs/vercel/serverless';
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   site: 'https://porfolio.dev/',
-  output: "server",
-  adapter: vercelServerless()
+  output: "static",
 });
