@@ -4,7 +4,8 @@ import robotsTxt from "astro-robots-txt";
 
 import { defineConfig } from 'astro/config';
 // Import /serverless for a Serverless SSR site
-import vercelServerless from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel/serverless';
+
 
 
 
@@ -13,5 +14,5 @@ export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   site: 'https://porfolio.dev/',
   output: "server",
-  adapter: vercelServerless()
+  adapter: vercel()
 });
