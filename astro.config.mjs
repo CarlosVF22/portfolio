@@ -8,6 +8,6 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
     integrations: [tailwind(), robotsTxt(), sitemap()],
     site: "https://carlosvasquez.dev/",
-    output: "server",
+    output: "static",
     adapter: vercel({}),
 });

@@ -3,6 +3,7 @@ dist/
 
 # generated types
 .astro/
+.vercel/
 
 # dependencies
 node_modules/
@@ -24,4 +25,3 @@ bun.*
 package-lock.json
 pnpm-lock.yaml
 
-.vercel/
