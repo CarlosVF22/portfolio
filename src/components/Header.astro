@@ -51,19 +51,22 @@ const navItems = [
     const sections = document.querySelectorAll("section")
     const navItems = document.querySelectorAll("header nav a")
 
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
+    const callback = (entries: any) => {
+      entries.forEach((entry: any) => {
         if (entry.isIntersecting) {
+          const isDarkMode = document.documentElement.classList.contains("dark");
+          const activeClass = isDarkMode ? "text-purple_personal_brand" : "text-red_personal_brand";
+
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-purple_personal_brand")
+              item.classList.add(activeClass);
             } else {
-              item.classList.remove("text-purple_personal_brand")
+              item.classList.remove("text-purple_personal_brand", "text-red_personal_brand");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,

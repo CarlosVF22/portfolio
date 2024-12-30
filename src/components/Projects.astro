@@ -4,6 +4,29 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import AstroIcon from "./icons/AstroIcon.astro"
+import Typescript from "./icons/Typescript.astro"
+import GraphQL from "./icons/GraphQL.astro"
+import Css from "./icons/Css.astro"
+import Javascript from "./icons/Javascript.astro"
+import Aws from "./icons/aws.astro"
+import Linux from "./icons/Linux.astro"
+import Docker from "./icons/Docker.astro"
+import Php from "./icons/Php.astro"
+import Laravel from "./icons/Laravel.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import Bash from "./icons/Bash.astro"
+import ExpressJS from "./icons/Express.astro"
+import NestJS from "./icons/NestJS.astro"
+import MySQL from "./icons/MySQL.astro"
+import PostgreSQL from "./icons/PostgreSQL.astro"
+import Supabase from "./icons/Supabase.astro"
+
+
+
+function shuffleArray(array:any) {
+  return array.sort(() => Math.random() - 0.5);
+}
 
 const TAGS = {
   NEXT: {
@@ -16,35 +39,179 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  ASTRO: {
+    name: 'Astro',
+    class:"bg-purple_light_personal_brand text-white",
+    icon: AstroIcon,
+  },
+  TYPESCRIPT: {
+    name: 'TypeScript',
+    class:"bg-[#235A97] text-white",
+    icon: Typescript,
+  },
+  GRAPHQL: {
+    name: 'GraphQL',
+    class:"bg-[#F3F4F7] text-[#E10098]",
+    icon: GraphQL,
+  },
+  CSS: {
+    name: 'CSS',
+    class: "bg-[#274DE4] text-white",
+    icon: Css,
+  },
+  JAVASCRIPT: {
+    name: 'JavaScript',
+    class: 'bg-[#C6BF31] text-white',
+    icon: Javascript
+  },
+  AWS: {
+    name: 'AWS',
+    class: 'bg-[#ffb23d] text-white',
+    icon: Aws
+  },
+  LINUX: {
+    name: 'Linux',
+    class: "bg-black text-white",
+    icon: Linux
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#00084D] text-white",
+    icon: Docker
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#6758F5] text-white",
+    icon: Php
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-black text-white",
+    icon: Laravel
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-[#336633] text-white",
+    icon: NodeJS
+  },
+  BASH: {
+    name: "Bash",
+    class: "bg-gray-700",
+    icon: Bash
+  },
+  EXPRESSJS: {
+    name: "Express.js",
+    class: "bg-black text-white",
+    icon: ExpressJS
+  },
+  NEST: {
+    name: "Nest.js",
+    class: "bg-black text-white",
+    icon: NestJS
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-gray-200 text-[#F2920F]",
+    icon: MySQL
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-gray-500 text-white",
+    icon: PostgreSQL
+  },
+  SUPABASE: {
+    name: "Supabase",
+    class: "bg-green-900 text-white",
+    icon: Supabase
+  }
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Paga Con Cripto - E-commerce con pagos en criptomonedas",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Primer E-commerce Colombiano con método de pago en criptomonedas por defecto, 30 días para devoluciones y soporte 24/7. Tu seguridad y satisfacción son nuestra prioridad.",
+    link: "https://pagaconcripto.com.co/",
+    github: "https://github.com/CarlosVF22/landing-paga-con-cripto",
+    image: "/projects/pagaconcripto.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.NODEJS, TAGS.BASH],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Live Music Aruba - Empresa especializada en la contratación de actuaciones en vivo",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Pagina web perteneciente a la empresa líder de espectáculos en vivo para la isla de Aruba, desarrollada con Next.js, TypeScript, Tailwind e integración hacia el Backend con API GraphQL y Apollo Server",
+    link: "https://livemusicaruba.com",
+    image: "/projects/livemusicaruba.webp",
+    tags: [TAGS.NEXT,TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.GRAPHQL, TAGS.EXPRESSJS, TAGS.NODEJS, TAGS.POSTGRESQL],
+  },
+  {
+    title: "Biosolutions - soluciones para el análisis microbiológicos y aseguramiento de la calidad",
+    description:
+      "Empresa dedicada a la venta de insumos de laboratorio para análisis microbiológicos y aseguramiento de calidad, líder en la industria Colombiana.",
+    link: "https://biosolutions.com.co",
+    image: "/projects/biosolutions.webp",
+    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.GRAPHQL, TAGS.NEST, TAGS.POSTGRESQL],
+  },
+  {
+    title: "Creadtive Agency - Agencia de desarrollo y marketing",
+    description:
+      "Agencia de desarrollo web y marketing enfocada en el mercado de Estados Unidos",
+    link: "https://www.creadtiveagency.com/",
+    image: "/projects/creadtiveagency.webp",
+    github: "https://github.com/CarlosVF22/creadtive-agency-website/",
+    tags: [TAGS.NEXT, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.SUPABASE],
+  },
+  {
+    title: "Cubikan - Productos medicos naturales",
+    description:
+      "Serenix y Aliviax son productos medicos naturales vendidos en Colombia, sirven para controlar la inflamación, dolor e insomnio.",
+    link: "https://cubikan.biosolutions.com.co/",
+    image: "/projects/cubikan.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.NEST, TAGS.POSTGRESQL],
+  },
+  {
+    title: "Skolmi - Educación virtual de calidad",
+    description:
+      "Serenix y Aliviax son productos medicos naturales vendidos en Colombia, sirven para controlar la inflamación, dolor e insomnio.",
+    link: "https://skolmi.com/",
+    image: "/projects/skolmi.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "Skolmi - Infraestructura (AWS)",
+    description:
+      "Diseñé e implementé soluciones innovadoras en AWS, incrementando en un 40% la eficiencia operativa respecto a métodos previos, y optimicé recursos técnicos que redujeron costos en un 20%.",
+    link: "https://skolmi.com/",
+    image: "/projects/skolmi-infra.webp",
+    tags: [TAGS.AWS, TAGS.LINUX, TAGS.DOCKER],
+  },
+  {
+    title: "Sisacad - Sistema de gestión académica",
+    description:
+      "Actualice y desarrollo nuevas funcionalidades para la plataforma de gestión académica (SISACAD) de la empresa Skolmi.",
+    link: "https://sisacad.skolmi.com/",
+    image: "/projects/sisacad.webp",
+    tags: [TAGS.PHP, TAGS.LARAVEL, TAGS.DOCKER, TAGS.MYSQL],
+  },
+  {
+    title: "MIA - Sistema de seguimiento académico para estudiantes",
+    description:
+      "Cree desde cero la plataforma de seguimiento académico MIA para los estudiantes de Skolmi, integre la plataforma con los demás servicios de la empresa para centralizar la información en un solo lugar",
+    link: "https://mia.skolmi.com/",
+    image: "/projects/mia.webp",
+    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND],
   },
 ]
+
+const shuffledProjects = shuffleArray(PROJECTS);
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    shuffledProjects.map(({ image, title, description, tags, link, github }:any) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img loading="lazy" alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
@@ -53,9 +220,9 @@ const PROJECTS = [
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
+      <ul class="flex flex-row mb-2 gap-x-2 flex-wrap">
+          {tags.map((tag:any) => (
+            <li class="py-1">
               <span
                 class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
@@ -78,7 +245,7 @@ const PROJECTS = [
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
-              Preview
+              Ver
             </LinkButton>
           )}
         </footer>
